@@ -12,8 +12,6 @@ ReserveButton.addEventListener('click', (event) =>{
     let Dates = document.getElementById('Date').value;
     let Time = document.getElementById('Time').value;
 
-
-
     // check if input is empty
 
     if (!FirstName || !LastName || !Email || !Pnumber || !Dates || !Time) {
@@ -25,49 +23,8 @@ ReserveButton.addEventListener('click', (event) =>{
             warning.classList.remove('show-Sucess'); 
         },2000);
         return; 
-    }
-
-    
-    console.log("FirstName: " + FirstName);
-    console.log("LastName: " + LastName);
-    console.log("Email: " + Email);
-    console.log("Pnumber: " + Pnumber);
-    console.log("Date: " + Dates);
-    console.log("Time: " + Time);
-    // console.log('I was clicked');
-
-    // Convert the time value to a Date object
-    let timeObj = new Date(`2000-01-01T${Time}:00`);
-
-    // Get the time string with AM/PM designation
-    let formattedTime = timeObj.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-
-
-
-
-    // const emailjs = require('emailjs-com');
-    // require('dotenv').config();
-    
-    // Initialize EmailJS with your user ID (EmailJS API key)
-   // Initialize EmailJS with your user ID (EmailJS API key)
-   emailjs.init("anloU0pCTeppqV9lu");
-
-
-  // Function to send the email
-    emailjs.send("service_2cednt4", "template_isxz23g", {
-      Firstname: FirstName,
-      Lastname: LastName,
-      Email: Email,
-      Pnumber: Pnumber,
-      Dates: Dates,
-      Time: formattedTime,
-      from_name: "Crave Solution Website",
-    })
-
-    // success
-    .then(function(response) {
-      console.log("Email sent successfully:", response);
-      let success = document.getElementById('success-cont');
+    }else{
+	    let success = document.getElementById('success-cont');
       success.classList.add('show-Sucess');
 
       // Clear input fields after successful submission
@@ -78,27 +35,22 @@ ReserveButton.addEventListener('click', (event) =>{
       document.getElementById('Date').value = '';
       document.getElementById('Time').value = '';
 
-
-      console.log('Status code:', response.status);
-      console.log('Response text:', response.text);
-      console.log('Parsed JSON data:', response.json);
-
       const audio = new Audio("./ting1.mp3");
 	    audio.play();
     
       setTimeout(() => {
         success.classList.remove('show-Sucess');
       },2000);
+	     console.log("FirstName: " + FirstName);
+    console.log("LastName: " + LastName);
+    console.log("Email: " + Email);
+    console.log("Pnumber: " + Pnumber);
+    console.log("Date: " + Dates);
+    console.log("Time: " + Time);
+    // console.log('I was clicked');
+    }
 
-    //   error
-    }, function(error) {
-      console.log("Email failed to send:", error);
-    let errs = document.getElementById('error-cont');
-        errs.classList.add('show-Sucess');
-        setTimeout(() => {
-            errs.classList.remove('show-Sucess');
-        },2000);
-    });
+
 });
 
 
