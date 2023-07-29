@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="png/img" href="./images/craved.png">
+    <title>Crave Solutions</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="navigation" id="navigation">
+            <div class="logo">
+                <img src="./images/logo.png" width="100%" alt="">
+            </div>
+            <div class="navlinks" id="navlink">
+                    <a href="#"><li onclick="closeNavlink()">Home</li></a>
+                    <a href="#aboutus"><li onclick="closeNavlink()">About Us</li></a>
+                    <a href="#menu"><li onclick="closeNavlink()">Menu</li></a>
+                    <a href="#best"><li onclick="closeNavlink()">Feature</li></a>
+                    <a href="#reservation"><li onclick="closeNavlink()">Reservation</li></a>
+                    <a href="#contact"><li onclick="closeNavlink()">Contact</li></a>
+                </li>
+            </div>
+
+            <!-- hamburger -->
+            <div class="eatmyhamburger">
+                <ion-icon name="menu" onclick="showNavlink()"></ion-icon>
+            </div>
+
+        </div>
+
+        <div class="navlink-overlay" id="navlinkOverlay">
+                
+        </div>
+
+        <!-- banner -->
+        <div class="banner">
+        <div class="banner-overlay">
+
+            <h2 id="crave">Crave</h2>
+            <h1 id="sol">Solutions</h1>
+
+        </div>
+            <img src="./images/banner-back.jpg" alt="">
+        </div>
+
+        <div class="about-us" id="aboutus">
+            <div class="about-deatils" id="about-details">
+                <span class="about-label">About Us</span>
+                <span class="ion"><ion-icon name="golf-outline"></ion-icon></span>
+                <p>
+                    Crave Solutions: Where culinary passion meets innovative excellence. We're a dynamic team of food enthusiasts revolutionizing the industry. From seamless online ordering to unforgettable dining experiences, join us on a flavorful journey. Indulge in success with Crave Solutions.
+                </p>
+            </div>
+            <div class="feature-product">
+                <div class="prod">
+                    <div class="f-produ anim1" id="anim1">
+                        <img src="./Menu/appetizers/popcorn-chicken.jpg" data-src="lazy-load.png" alt="" loading="lazy">
+                    </div>
+                    <div class="f-produ anim2" id="anim2">
+                        <img src="./Menu/burger/ultimate-overload.jpeg" data-src="lazy-load.png" alt="" loading="lazy">
+                    </div>
+                </div>
+                <div class="prod">
+                    <div class="f-produ anim3" id="anim3">
+                        <img data-src="lazy-load.png" src="./Menu/dessert/brownies.jpg" alt="" loading="lazy">
+                    </div>
+                    <div class="f-produ anim4" id="anim4">
+                        <img data-src="lazy-load.png" src="./Menu/main-course/pork-belly.jpg" alt="" loading="lazy">
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+         <!-- menu -->
+         <div class="menu-container" id="menu">
+                <span>
+                    <h1>Menu</h1>
+                </span>
+
+                <div class="menu-tab" id="menu-tab">
+                    <span class="back" id="back"><ion-icon name="arrow-back-outline"></ion-icon></span>
+                    <!-- <span class="forward" id="forward"><ion-icon name="arrow-forward-outline"></ion-icon></span> -->
+                    <label for="">Menu</label>
+                </div>
+
+                <div class="menu-list" id="menu-list">
+                    <li onclick="All()" class="choice active">All</li>
+                    <li onclick="Appetizers()" class="choice">Appetizers</li>
+                    <li onclick="Burger()" class="choice">Burger</li>
+                    <li onclick="Italian()" class="choice">Italian Pizza</li>
+                    <li onclick="Main()" class="choice">Main Course</li>
+                    <li onclick="Dessert()" class="choice">Dessert</li>
+                    <li onclick="Power()" class="choice">Power Ups</li>
+                </div>
+
+                <!-- menu container-list -->
+
+                <div class="menu">
+
+                    <!-- main-course -->
+                    <li class="main">
+                        <small>₱ 120</small>
+                        <div class="dish-name">
+                            <label for="">
+                                Beef-Shawarmaa
+                            </label>
+                        </div>
+                        <img  src="./Menu/main-course/Beef-Shawarmaa.jpg" data-src="lazy-load.png" alt="" loading="lazy">
+                    </li>
+                    <li class="main">
+                        <small>₱ 270</small>
+                        <div class="dish-name">
+                            <label for="">
+                               Chicken-Leg
+                            </label>
+                        </div>
+                        <img data-src="lazy-load.png" src="./Menu/main-course/chiken-leg.jpg" alt="" loading="lazy" >
+                    </li>
+                    <li class="main">
+                        <small>₱ 300</small>
+                        <div class="dish-name">
+                            <label for="">
+                                Pork-Belly
+                            </label>
+                        </div>
+                        <img data-src="lazy-load.png" src="./Menu/main-course/pork-belly.jpg" alt="" loading="lazy" >
+                    </li>
+                    <li class="main">
+                        <small>₱ 280</small>
+                        <div class="dish-name">
+                            <label for="">
+                                Tuna-Panga
+                            </label>
+                        </div>
+                        <img data-src="lazy-load.png" src="./Menu/main-course/tuna-panga.jpg" alt="" loading="lazy">
+                    </li>
+                    <!-- main-course -->
+
+
+                    <!-- Appetizers -->
+                    <li class="appetizers">
+                        <small>₱ 180</small>
+                        <div class="dish-name">
+                            <label for="">
+                                Calamari-Buffalo
+                            </label>
+                        </div>
+                        <img data-src="lazy-load.png" src="./Menu/appetizers/calamari-buffalo.jpg" alt="" loading="lazy">
+                    </li>
+                    <li class="appetizers">
+                        <small>₱ 170</small>
+                        <div class="dish-name">
+                            <label for="">
+                              French Fries w/ Overload Meat
+                            </label>
+                        </div>
+                        <img data-src="lazy-load.png" src="./Menu/appetizers/french-fries-meat.jpg" alt="" loading="lazy">
+                    </li>
+                    <li class="appetizers">
+                        <small>₱ 220</small>
+                        <div class="dish-name">
+                            <label for="">
+                                Mozarella Sticks
+                            </label>
+                        </div>
+                        <img data-src="lazy-load.png" src="./Menu/appetizers/mozarella-sticks.jpg" alt="" loading="lazy">
+                    </li>
+                    <li class="appetizers">
+                        <small>₱ 180</small>
+                        <div class="dish-name">
+                            <label for="">
+                                Chicken Popcorn
+                            </label>
+                        </div>
+                        <img data-src="lazy-load.png" src="./Menu/appetizers/popcorn-chicken.jpg" alt="" loading="lazy">
+                    </li>
+                    <!-- Appetizers -->
+
+                    <!-- Burger -->
+                    <li class="burger">
+                        <small>₱ 250</small>
+                        <div class="dish-name">
+                            <label for="">
+                                Chicken Zinger
+                            </label>
+                        </div>
+                        <img data-src="lazy-load.png" src="./Menu/burger/chicken-zinger.jpg" alt="" loading="lazy">
+                    </li>
+                    <li class="burger">
+                        <small>₱ 240</small>
+                        <div class="dish-name">
+                            <label for="">
+                              Grill Burger
+                            </label>
+                        </div>
+                        <img data-src="lazy-load.png" src="./Menu/burger/grill-burger.jpg" alt="" loading="lazy">
+                    </li>
+                    <li class="burger">
+                        <small>₱ 220</small>
+                        <div class="dish-name">
+                            <label for="">
+                                Signature Burger
+                            </label>
+                        </div>
+                        <img data-src="lazy-load.png" src="./Menu/burger/signature-burger.jpg" alt="" loading="lazy">
+                    </li>
+                    <li class="burger">
+                        <small>₱ 180</small>
+                        <div class="dish-name">
+                            <label for="">
+                                Ultimate Overload Burger
+                            </label>
+                        </div>
+                        <img data-src="lazy-load.png" src="./Menu/burger/ultimate-overload.jpeg" alt="" loading="lazy">
+                    </li>
+                    <!-- burger -->
+
+                    <!-- Pizza -->
+                    <li class="piza">
+                        <small>₱ 250</small>
+                        <div class="dish-name">
+                            <label for="">
+                                Pizza Chorizo
+                            </label>
+                        </div>
+                        <img data-src="lazy-load.png" src="./Menu/italian-pizza/chorizo-pizza.jpg" alt="" loading="lazy">
+                    </li>
+                    <li class="piza">
+                        <small>₱ 230</small>
+                        <div class="dish-name">
+                            <label for="">
+                               Pizza Marggarita
+                            </label>
+                        </div>
+                        <img data-src="lazy-load.png" src="./Menu/italian-pizza/margherita-pizza.jpg" alt="" loading="lazy">
+                    </li>
+                    <li class="piza">
+                        <small>₱ 230</small>
+                        <div class="dish-name">
+                            <label for="">
+                                Pizza Hawaiian
+                            </label>
+                        </div>
+                        <img data-src="lazy-load.png" src="./Menu/italian-pizza/pizza-hawaiian.webp" alt="" loading="lazy">
+                    </li>
+                    <li class="piza">
+                        <small>₱ 270</small>
+                        <div class="dish-name">
+                            <label for="">
+                                Pizza Kebab
+                            </label>
+                        </div>
+                        <img data-src="lazy-load.png" src="./Menu/italian-pizza/pizza-kebab.jpg" alt="" loading="lazy">
+                    </li>
+                    <!-- pizaa -->
+
+                    <!-- powerups -->
+                    <li class="powerups">
+                        <small>₱ 180</small>
+                        <div class="dish-name">
+                            <label for="">
+                                Chocolate Smoothies
+                            </label>
+                        </div>
+                        <img data-src="lazy-load.png" src="./Menu/powerups/chocolate.jpg" alt="" loading="lazy">
+                    </li>
+                    <li class="powerups">
+                        <small>₱ 210</small>
+                        <div class="dish-name">
+                            <label for="">
+                              Mexican Smoothies
+                            </label>
+                        </div>
+                        <img data-src="lazy-load.png" src="./Menu/powerups/mexican-smoothes.jpg" alt="" loading="lazy">
+                    </li>
+                    <li class="powerups">
+                        <small>₱ 180</small>
+                        <div class="dish-name">
+                            <label for="">
+                                Strawberry Smoothies
+                            </label>
+                        </div>
+                        <img data-src="lazy-load.png" src="./Menu/powerups/strawberry.jpg" alt="" loading="lazy">
+                    </li>
+                    <!-- power ups -->
+                    
+                    <!-- dessert -->
+                    <li class="dessert">
+                        <small>₱ 180</small>
+                        <div class="dish-name">
+                            <label for="">
+                                Brownies
+                            </label>
+                        </div>
+                        <img data-src="lazy-load.png" src="./Menu/dessert/brownies.jpg" alt="" loading="lazy">
+                    </li>
+                    <li class="dessert">
+                        <small>₱ 180</small>
+                        <div class="dish-name">
+                            <label for="">
+                                Mango Pana Cotta
+                            </label>
+                        </div>
+                        <img data-src="lazy-load.png" src="./Menu/dessert/mango-pana-cotta.webp" alt="" loading="lazy">
+                    </li>
+                    <!-- dessert -->
+
+                </div>
+
+         </div>
+
+
+         <!-- ourbest -->
+         <div class="best-container" id="best">
+            <div class="best-details">
+                <span class="about-label">Our Best</span>
+                <span class="ion"><ion-icon name="golf-outline"></ion-icon></span>
+                <p>
+                    Crave Solutions: Where culinary passion meets innovative excellence. We're a dynamic team of food enthusiasts revolutionizing the industry. From seamless online ordering to unforgettable dining experiences, join us on a flavorful journey. Indulge in success with Crave Solutions.
+                </p>
+            </div>
+            <div class="best-product">
+                
+                <swiper-container class="mySwiper"  effect="fade" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+                    <swiper-slide>
+                        <img data-src="lazy-load.png" src="./Menu/dessert/mango-pana-cotta.webp" alt="" loading="lazy">
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img data-src="lazy-load.png" src="./Menu/main-course/pork-belly.jpg" alt="" loading="lazy">
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img data-src="lazy-load.png" src="./Menu/burger/ultimate-overload.jpeg" alt="" loading="lazy">
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img data-src="lazy-load.png" src="./Menu/italian-pizza/margherita-pizza.jpg" alt="" loading="lazy">
+                    </swiper-slide>
+                  </swiper-container>
+                
+            </div>
+
+         </div>
+
+
+         <!-- Reservation -->
+         <div class="reservation-cont" id="reservation">
+            <span>
+                <h1>Reservation</h1>
+            </span>
+
+            <form>
+                <div class="reservation-from">
+                    <div class="left-input-from">
+                        <div class="input-box">
+                            <span>First Name *</span>
+                            <input id="Fname" name="Firstname" autocomplete="off" type="text" required>
+                        </div>
+                        <div class="input-box">
+                            <span>Last Name *</span>
+                            <input id="Lname" name="Lastname" autocomplete="off" type="text" required>
+                        </div>
+                        <div class="input-box">
+                            <span>Email *</span>
+                            <input id="Email" name="Email" autocomplete="off" type="email" required>
+                        </div>
+                    </div>
+                    <div class="left-input-from">
+                        <div class="input-box">
+                            <span>Phone Number *</span>
+                            <input id="Pnumber" name="Pnumber" autocomplete="off" type="text" required>
+                        </div>
+                        <div class="input-box">
+                            <span>Reservation Date *</span>
+                            <input id="Date" name="Date" autocomplete="off" type="date" required>
+                        </div>
+                        <div class="input-box">
+                            <span>Reservation Time *</span>
+                            <input id="Time" name="Time" autocomplete="off" type="time" required>
+                        </div>
+                    </div>
+
+                    <!-- hours available -->
+                    <div class="hours">
+                        <span>
+                            <small>Monday to Friday: 7:30 AM - 11:30 AM</small>
+                        </span>
+                        <span>
+                            <small>Saturday & Sunday: 8:00 AM - 9:00 AM</small>
+                        </span>
+                        <span>
+                            <small>Monday to Friday: 12:00 PM - 5:00 PM</small>
+                        </span>
+                        <span>
+                            <small>Monday to Saturday: 6:00 PM - 1:00 AM</small>
+                        </span>
+                        <span>
+                            <small>Sunday to Monday: 5:30 PM - 12:00 AM </small>
+                        </span>
+                        
+                    </div>
+
+                </div>
+
+                <!-- success and Error -->
+                <div class="success-cont" id="success-cont">
+                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                    Reservation Complete
+                </div>
+
+                <div class="success-cont failed" id="error-cont">
+                    <ion-icon name="close-circle-outline"></ion-icon>
+                    Reservation Failed
+                </div>
+
+                <div class="success-cont warning" id="warning-cont">
+                    <ion-icon name="warning-outline"></ion-icon>
+                    Please input required field
+                </div>
+
+               
+                <div class="rereserv-btn">
+                    <button id="submitReservation" type="submit">Reserved Now</button>
+                </div>
+            </form>
+
+            
+
+         </div>
+
+
+
+         <!-- footer -->
+         <footer>
+            <div class="footer-banner">
+                <span>
+                    <label for="">DIAL</label>
+                    <h1>(+63) 0000 0000 000</h1>
+                </span>
+                <span>
+                    <button>Reserved Now</button>
+                </span>
+            </div>
+
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d981.469843971237!2d123.84635587145007!3d10.271301939489776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1686615787418!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+
+            <!-- contact us -->
+            <div class="contact" id="contact">
+                <span>
+                    <h1>Contact us</h1>
+                </span>
+
+                <form action="">
+                    <div class="contact-form">
+                        <div class="contact-from-input">
+                            <div class="input-contact errs" >
+                                <span>Name *</span>
+                                <input id="Fullname" name="CFullname" type="text" autocomplete="off">
+                            </div>
+                            <div class="input-contact errs" >
+                                <span>Phone Number *</span>
+                                <input id="PhoneNumber" name="CPhoneNumber" type="tel" autocomplete="off">
+                            </div>
+                            <div class="input-contact errs" >
+                                <span>Email *</span>
+                                <input id="Useremail" name="CUseremail" type="email" autocomplete="off">
+                            </div>
+                        </div>
+    
+                        <div class="message errs" >
+                            <textarea id="message" name="Cmessage" placeholder="Send us a mesage.."></textarea>
+                        </div>
+    
+                    </div>
+
+
+                    <div class="submit-message">
+                        <span id="sendMessage">Send message</span>
+                    </div>
+
+                </form>
+
+                
+
+
+                <!-- contact form success and error -->
+                <!-- success and Error -->
+                <div class="success-cont" id="message-sent">
+                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                    Message Sent
+                </div>
+
+                <div class="success-cont failed" id="message-field">
+                    <ion-icon name="close-circle-outline"></ion-icon>
+                    Message failed to sent
+                </div>
+
+                <div class="success-cont warning" id="message-warning">
+                    <ion-icon name="warning-outline"></ion-icon>
+                    Please input required field
+                </div>
+
+                <div class="social">
+                    <span><ion-icon name="logo-facebook"></ion-icon></span>
+                    <span><ion-icon name="logo-twitter"></ion-icon></span>
+                    <span><ion-icon name="logo-instagram"></ion-icon></span>
+                </div>
+
+            </div>
+
+
+            <!-- back to top arrow -->
+            <div class="back-totop" id="back-totop">
+                <a href="#top"><span><ion-icon name="arrow-up-outline"></ion-icon></span></a> 
+            </div>
+
+
+            <div class="footer-end">
+                © Copyright 2023 | All Rights Reserved | CraveSolutions.com.ph
+            </div>
+
+         </footer>
+
+
+    </div>
+</body>
+
+
+<script src="./js/reservation.js"></script>
+<script src="./js/contact.js"></script>
+<!-- <script src="./js/send.js"></script> -->
+<script src="./js/app.js"></script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</html>
